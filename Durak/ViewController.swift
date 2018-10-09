@@ -11,12 +11,17 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var message: NSTextField!
+    @IBOutlet weak var deckTrumpCard: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         message.stringValue = "Hello"
+        deckTrumpCard.image = NSImage(named: NSImage.Name("QS"))
+        deckTrumpCard.rotate(byDegrees: 90)
+        
+        
     }
 
     override var representedObject: Any? {
@@ -24,4 +29,7 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    
+    
 }
